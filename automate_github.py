@@ -5,11 +5,12 @@ import os, argparse
 # run these in terminal
 # python -m venv virtenv (run this only once if you dont have one in the directory already)
 # virtenv\Scripts\activate.bat
-
+# make sure you have all the dependencies you need in this virtual environment by typing 'pip install -r requirements.txt'
 # to create a public repo: python automate_github.py --name [YourRepoName]
 # to create a private repo: python automate_github.py --name [YourRepoName] --private
-if __name__ == '__main__':
-    pass
+
+#region main()
+def main():
     g = Github(Secrets.apiKey)
 
     # repos = g.search_repositories(query='language:python')
@@ -44,5 +45,10 @@ if __name__ == '__main__':
         print(f)
     except Exception as e:
         print(e)
+#endregion
+
+if __name__ == '__main__':
+    pass
+    main()
 
 
