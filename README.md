@@ -1,1 +1,13 @@
-# GitHubAutomationWindows
+# Thanks for using my script! It is fulfilling to know that I can make someone else's life easier with this automation script
+
+Directions:
+__run these in terminal (assuming you're already in the directory containing automate_github.py)__
+```python -m venv [VirtualEnvironmentName]``` (run this only once if you dont have one in the directory already)
+```[VirtualEnvironmentName]\Scripts\activate.bat``` (execute this line)
+make sure you have all the dependencies you need in this virtual environment by typing ```pip install -r requirements.txt```
+to create a public repo: ```python automate_github.py --name [YourRemoteRepoName]```
+to create a private repo: ```python automate_github.py --name [YourRemoteRepoName] --private```
+
+## now you just have to go inside the automate_github.py script and add your own local repository path (directions are shown in comments in the script)
+
+## Enjoy!

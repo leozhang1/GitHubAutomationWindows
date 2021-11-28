@@ -2,12 +2,7 @@ from github import Github
 from secrets import Secrets
 import os, argparse
 
-# run these in terminal
-# python -m venv virtenv (run this only once if you dont have one in the directory already)
-# virtenv\Scripts\activate.bat
-# make sure you have all the dependencies you need in this virtual environment by typing 'pip install -r requirements.txt'
-# to create a public repo: python automate_github.py --name [YourRepoName]
-# to create a private repo: python automate_github.py --name [YourRepoName] --private
+
 
 #region main()
 def main():
@@ -30,12 +25,12 @@ def main():
 
     # creating local repository and connect with the created remote one from above
     try:
-        repoPath = Secrets.repoPath
+        repoPath = Secrets.repoPath # change this line to be your desired local repo path
         os.chdir(repoPath)
         os.system(f'mkdir {repoName}')
         os.chdir(f'{repoPath}{repoName}')
         os.system('git init')
-        os.system(f'git remote add origin https://github.com/leozhang1/{repoName}.git')
+        os.system(f'git remote add origin https://github.com/leozhang1/{repoName}.git') # change 'leozhang1' to your own github username
         os.system(f"echo # {repoName} >> README.md")
         os.system('git add .')
         os.system('git commit -m "Initial Commit"')
