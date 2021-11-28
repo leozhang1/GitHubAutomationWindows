@@ -18,6 +18,6 @@ class Secrets:
     apiKey='[YourGithubAPiKey]' (if you don't know what this is, I would suggest doing some research on the internet. Here's one helpful video https://www.youtube.com/watch?v=b3ySWJinSh4&t=404s)
     repoPath='[YourLocalRepositoryPath]'
 ```
-## now you just have to go inside the automate_github.py script and add your own local repository path (directions are shown in comments in the script)
+## Now you just have to go inside the automate_github.py script and add your own local repository path (directions are shown in comments in the script)
 
 ## Enjoy!
