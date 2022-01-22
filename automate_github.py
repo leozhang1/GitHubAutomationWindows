@@ -31,7 +31,13 @@ def main():
         os.chdir(f'{repoPath}{repoName}')
         os.system('git init')
         os.system(f'git remote add origin https://github.com/leozhang1/{repoName}.git') # change 'leozhang1' to your own github username
+    #region files you want to add
         os.system(f"echo # {repoName} >> README.md")
+        os.system(f"echo # {repoName} >> .gitignore")
+
+    #endregion
+
+
         os.system('git add .')
         os.system('git commit -m "Initial Commit"')
         os.system('git branch -m main')
