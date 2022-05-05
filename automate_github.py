@@ -4,7 +4,7 @@ import os, argparse
 
 
 
-#region main()
+
 def main():
     g = Github(Secrets.apiKey)
 
@@ -33,11 +33,11 @@ def main():
         os.system(f'git remote add origin https://github.com/leozhang1/{repoName}.git') # change 'leozhang1' to your own github username
     #region files you want to add
         os.system(f"echo # {repoName} >> README.md")
-        os.system(f"echo # {repoName} >> .gitignore")
+        os.system("echo "" >> .gitignore")
 
     #endregion
 
-
+# python automate_github.py --name OpenCV_Practice_In_C++ python -m venv virtenv
         os.system('git add .')
         os.system('git commit -m "Initial Commit"')
         os.system('git branch -m main')
@@ -46,7 +46,7 @@ def main():
         print(f)
     except Exception as e:
         print(e)
-#endregion
+
 
 if __name__ == '__main__':
     pass
